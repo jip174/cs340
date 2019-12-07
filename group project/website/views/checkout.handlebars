@@ -1,0 +1,36 @@
+<html>
+    add new checkout:</h3>
+<form id= "addCheckout" action= "/checkout" method ="post">
+    Customer Id: <input type = "text" name= "custId"> <br>
+    Book: <select name = "bookId">
+        {{#each book}}
+        <option value="{{bookId}}">{{title}}</option>
+        {{/each}}
+    </select><br>
+    
+    Movie: <select name="movieId">
+        {{#each movie}}
+        <option value= "{{movieId}}">{{movieId}}</option>
+        {{/each}}
+    </select><br>
+    <br>
+    <input type="submit" value="SUBMIT">
+</form>
+<br/>
+<h3>Cart Checkout</h3>
+    <thead>
+        <th>Customer ID</th>
+        <th>Book</th>
+        <th>Movie</th>
+    </thead>
+    <tbody>
+        {{#each checkout}}
+        <tr>
+            <td>{{custId}}</td>
+            <td>{{book}}</td>
+            <td>{{movie}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+    </html>

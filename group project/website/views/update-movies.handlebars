@@ -1,0 +1,8 @@
+<h1> Update {{movies.title}}{{movies.year}}{{books.checkedout}}:</h1>
+<form id= "update-movies" action= "/movies" method="post">
+Title: <input type = "text" name "title" value = "{{movies.title}}"><br>
+Year: <input type= "text" name "year" value ="{{movies.year}}"><br>
+Checked Out: <input type="radio" name= "checkOut" value= "yes" checked> Yes<br>
+                 <input type="radio" name= "checkOut" value= "no">No<br>
+</form>
+<button onclick= "updatemovies({{movies.id}})">Update</button>

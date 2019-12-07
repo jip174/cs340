@@ -1,0 +1,44 @@
+<html>
+     <h4><a href="index.html">Return to Title Page</a></h4>
+<h3>Add movie</h3>
+<from id="addMovie" action= "checkout.html" method="post">
+    <fieldset>
+    Id: <input type="number" name="id"<br>
+    Title: <input type= "text" name="title"<br>
+    Year: <input type= "number" name="year"<br>
+    Checked out: <input type="radio" name= "checkOut" value= "yes" checked> Yes
+                 <input type="radio" name= "checkOut" value= "no">No<br>
+    <input type="submit" value="Submit">
+</fieldset>
+</form> <br/>
+
+<h3>Current Movies:</h3>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Checked Out</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+           <td>Star Wars</td>
+           <td>1977</td>
+           <td>0</td>
+       </tr>
+       <tr>
+           <td>2</td>
+          <td>Empire Strikes Back</td>
+          <td>1980</td>
+          <td>0</td>
+      </tr>
+      <tr>
+       <td>3</td>
+      <td>Return of the Jedi</td>
+      <td>1983</td>
+      <td>1</td>
+      </tr>
+    </tbody>
+    </table>
+    </html>

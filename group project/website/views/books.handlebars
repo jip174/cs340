@@ -1,0 +1,33 @@
+<html>
+
+
+
+<h3>Current Books:</h3>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Checked Out</th>
+    </thead>
+    <tbody>
+        {{#each books}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>{{author}}</td>
+            <td>{{checkedOut}}</td>
+            <td><button onclick="deletebooks({{id}})">Delete</button></td>
+            <td><a href="/books/{{id}}">Update</a></td>
+            <td><button onclick="addtoCart({{id}})">Cart</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+    <form id ="addbook" action="/books" method="post">
+    Title: <input type= "text" name= "title"><br>
+    Author: <input type= "text" name= "author"><br>
+    Checked Out: <input type= "checkbox" name= "checkedout"><br>
+    <input type="submit" value="Submit">
+    </form>
+    </table>
+    </html>

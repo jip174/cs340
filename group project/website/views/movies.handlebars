@@ -1,0 +1,33 @@
+<html>
+
+<h3>Add movie</h3>
+
+
+<h3>Current Movies:</h3>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Checked Out</th>
+    </thead>
+    <tbody>
+        {{#each movies}}
+        <tr>
+           <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>{{year}}</td>
+            <td>{{checkOut}}</td>
+             <td><button onclick="deletemovies({{id}})">Delete</button></td>
+            <td><a href="/movies/{{id}}">Update</a></td>
+            <td><button onclick="addtoCart({{id}})">Cart</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+     <form id ="addmovie" action="/movies" method="post">
+    Title: <input type= "text" name= "title"><br>
+    Year: <input type= "text" name= "year"><br>
+    Checked Out: <input type= "checkbox" name= "checkedout"><br>
+    <input type="submit" value="Submit">
+    </table>
+    </html>

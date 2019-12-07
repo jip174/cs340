@@ -1,0 +1,40 @@
+<html>
+        <h4><a href="index.html">Return to Title Page</a></h4>
+    Checkout:</h3>
+<form id= "addCheckout" action= "/checkout" method ="post">
+    Customer Id: <input type = "text" name= "custId"> <br>
+   <!-- Book: <select name = "bookId">
+        {{#each book}}
+        <option value="bookId">bookId</option>
+        
+    </select><br>
+    
+    Movie: <select class ="drop-down" name="movieId">
+        {{#each movie}}
+        <option value= "movieId">movieId</option>
+        
+    </select><br>-->
+    <br>
+    <input type="submit" value="SUBMIT">
+</form>
+<br/>
+<h3>Cart Checkout</h3>
+<table>
+    <thead>
+        <th>Customer ID</th>
+        <th>Book</th>
+        <th>Movie</th>
+        <th>Due Date</th>
+    </thead>
+    <tbody>
+        {{#each checkout}}
+        <tr>
+            <td>{{custId}}</td>
+            <td>{{book}}</td>
+            <td>{{movie}}</td>
+            <td>"Due Date"</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+    </html>

@@ -1,0 +1,8 @@
+<h1> Update {{books.title}}{{books.author}}{{books.checkedout}}:</h1>
+<form id= "update-books" action= "/books" method="post">
+Title: <input type = "text" name "title" value = "{{books.title}}"><br>
+Author: <input type= "text" name "author" value ="{{books.author}}"><br>
+Checked Out: <input type="radio" name= "checkOut" value= "yes" checked> Yes<br>
+                 <input type="radio" name= "checkOut" value= "no">No<br>
+</form>
+<button onclick= "updatebooks({{books.id}})">Update</button>

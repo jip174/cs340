@@ -1,0 +1,31 @@
+<html>
+<h4><a href="index.html">Return to Title Page</a></h4>
+<h3>Add Customer</h3>
+<from id="addcust" action= "/customer" method="post">
+    Id: <input type="number" name="id"<br>
+    First Name: <input type= "text" name="fname"<br>
+    Last Name: <input type= "text" name="lname"<br>
+    Phone Number: <input type="tel" name= "phoneNum"<br>
+   <input type="submit" value="Submit">
+</form> <br/>
+
+<h3>Current Customer:</h3>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+    </thead>
+    <tbody>
+       
+        <tr>
+             <td>{{id}}</td>
+            <td>{{fname}}</td>
+            <td>{{lname}}</td>
+            <td>{{phoneNum}}</td>
+        </tr>
+       
+    </tbody>
+    </table>
+    </html>
